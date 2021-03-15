@@ -1,9 +1,8 @@
-'''
-ID: Mihir Savkar [mihir.s11]
-PROG: ride
-LANG:PYTHON3
-'''
-
+"""
+USER: mihir.s1
+TASK: ride
+LANG: PYTHON3
+"""
 def getNumber(letters):
     numbers = []
     for letter in letters:
