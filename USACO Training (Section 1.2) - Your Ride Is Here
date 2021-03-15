@@ -1,0 +1,32 @@
+'''
+ID: Mihir Savkar [mihir.s11]
+PROG: ride
+LANG:PYTHON3
+'''
+
+def getNumber(letters):
+    numbers = []
+    for letter in letters:
+        number = ord(letter)-96
+        numbers.append(number)
+    ans = 1
+    for i in numbers:
+        ans = i*ans
+    answer = ans%47
+    return(answer)
+
+filein = open('ride.in', 'r')
+fileout = open('ride.out', 'w')
+
+cometname = filein.readline()
+groupname = filein.readline()
+
+cometnumber = getNumber(cometname)
+groupnumber = getNumber(groupname)
+
+while True:
+    if cometnumber == groupnumber:
+        fileout.write("GO")
+    else:
+        fileout.write("STAY")
+fileout.close()
